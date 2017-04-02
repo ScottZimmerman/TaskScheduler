@@ -1,0 +1,26 @@
+Arguments: ['engine.py', 'localhost', '51717', '0', '1']
+Starting new job
+
+15.json
+running 15.json
+
+18.json
+running 18.json
+
+22.json
+running 22.json
+
+20.json
+running 20.json
+RESULT
+462.5
+
+8.json
+running 8.json
+
+
+
+
+
+
+None

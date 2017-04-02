@@ -1,0 +1,116 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/client_main.cpp
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+fstream
+-
+iostream
+-
+boost/shared_ptr.hpp
+-
+stdint.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/stdint.h
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+constants.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+command_line_parser.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/command_line_parser.h
+client_output_generator.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/client_output_generator.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/client_output_generator.cpp
+client_output_generator.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/client_output_generator.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/client_output_generator.h
+fstream
+-
+string
+-
+boost/shared_ptr.hpp
+-
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/command_line_parser.cpp
+command_line_parser.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/command_line_parser.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/command_line_parser.h
+boost/lexical_cast.hpp
+-
+fstream
+-
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+algorithm
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/stubs/port.h
+-
+google/protobuf/stubs/once.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/wire_format_lite_inl.h
+-
+google/protobuf/descriptor.h
+-
+google/protobuf/generated_message_reflection.h
+-
+google/protobuf/reflection_ops.h
+-
+google/protobuf/wire_format.h
+-
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+

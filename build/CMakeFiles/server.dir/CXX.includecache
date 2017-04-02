@@ -1,0 +1,216 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.cpp
+connection.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+listener.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+event.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+constants.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.cpp
+connectionManager.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+cerrno
+-
+connection.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+constants.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+boost/thread/thread.hpp
+-
+boost/bind.hpp
+-
+boost/ref.hpp
+-
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.cpp
+dependenciesTable.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+fstream
+-
+math.h
+-
+iostream
+-
+vector
+-
+algorithm
+-
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+string
+-
+boost/shared_ptr.hpp
+-
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.cpp
+eventQueue.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+vector
+-
+fstream
+-
+boost/unordered_map.hpp
+-
+event.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.cpp
+listener.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+fstream
+-
+string
+-
+boost/thread/mutex.hpp
+-
+boost/thread.hpp
+-
+event.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+assert.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/assert.h
+eventQueue.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc
+msg.pb.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+algorithm
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/stubs/port.h
+-
+google/protobuf/stubs/once.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/wire_format_lite_inl.h
+-
+google/protobuf/descriptor.h
+-
+google/protobuf/generated_message_reflection.h
+-
+google/protobuf/reflection_ops.h
+-
+google/protobuf/wire_format.h
+-
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.cpp
+scheduler.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+string
+-
+fstream
+-
+iostream
+-
+event.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+tasksTable.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+listener.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/server_main.cpp
+fstream
+-
+listener.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+scheduler.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+event.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+eventQueue.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+connectionManager.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.cpp
+tasksTable.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+time.h
+-
+fstream
+-
+math.h
+-
+iostream
+-
+string.h
+-
+stdio.h
+-
+dependenciesTable.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+constants.h
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+

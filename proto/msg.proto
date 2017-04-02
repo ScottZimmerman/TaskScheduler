@@ -1,0 +1,92 @@
+syntax = "proto3";
+package schedulerMessages;
+
+message Msg {
+	oneof type
+	{
+		Request REQUEST = 1;
+		Response RESPONSE = 2;
+	}
+}
+
+message Request
+{
+	oneof type
+	{
+		Request_assign ASSIGN = 1;
+		Request_queue QUEUE = 2;
+		Request_receive RECEIVE = 3;
+		Request_requeue REQUEUE = 4;
+		Request_finish FINISH = 5;
+		Request_cancel CANCEL = 6;
+		Request_add_dependency ADD_DEPENDENCY = 7;
+	}
+}
+
+message Response
+{
+	oneof type
+	{
+		Response_assign ASSIGN = 1;
+		Response_queue QUEUE = 2;
+		Response_receive RECEIVE = 3;
+		Response_requeue REQUEUE = 4;
+		Response_finish FINISH = 5;
+		Response_cancel CANCEL = 6;
+		Response_add_dependency ADD_DEPENDENCY = 7;
+	}
+}
+
+
+
+message Request_assign{
+	int32 count = 1;
+}
+message Request_queue{
+	int32 id = 1;
+	string input_bundle = 2;
+	int32 task_queued_from = 3;
+}
+message Request_receive{
+	string instance_name = 1;
+}
+message Request_requeue{
+	int32 id = 1;
+}
+message Request_finish{
+	int32 id = 1;
+}
+message Request_cancel{
+	int32 id = 1;	
+}
+message Request_add_dependency{
+	int32 parent_id = 1;
+	int32 child_id = 2;
+}
+
+
+
+message Response_assign{
+	bool multiple = 1;
+	int32 id = 2;
+	repeated int32 ids = 3;
+}
+message Response_queue{
+	
+}
+message Response_receive{
+	string input_bundle = 1;
+}
+message Response_requeue{
+	bool requeue_failed = 1;
+}
+message Response_finish{
+	
+}
+message Response_cancel{
+	
+}
+message Response_add_dependency{
+	
+}
+

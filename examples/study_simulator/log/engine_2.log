@@ -1,0 +1,66 @@
+Arguments: ['engine.py', 'localhost', '51717', '2', '0']
+1.json
+running 1.json
+
+3.json
+running 3.json
+
+4.json
+running 4.json
+
+6.json
+running 6.json
+
+7.json
+running 7.json
+
+9.json
+running 9.json
+
+10.json
+running 10.json
+
+12.json
+running 12.json
+
+16.json
+running 16.json
+
+14.json
+running 14.json
+RESULT
+240.5
+
+21.json
+running 21.json
+
+25.json
+running 25.json
+
+23.json
+running 23.json
+Previous P_A was run
+{u'S': [u'24', u'25'], u'avg': 156.5, u'prev_N': 2, u'P_A': u'23'}
+156.5
+2
+S
+576.0
+3
+296.333333333
+S
+625.0
+4
+378.5
+RESULT
+378.5
+
+5.json
+running 5.json
+
+2.json
+running 2.json
+
+
+
+
+None

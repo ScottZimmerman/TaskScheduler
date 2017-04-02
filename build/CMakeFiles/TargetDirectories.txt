@@ -1,0 +1,2 @@
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/client.dir
+/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/server.dir
