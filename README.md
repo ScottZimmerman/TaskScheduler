@@ -13,23 +13,18 @@ Provided in "scripts" is an example of a compute engine, which periodically runs
 ## Client Functions
 Depending on the command line arguments, the client can submit one of the following commands to the server. Argument syntax is: \<required argument> (\<optional argument>).
 
--assign (\<count>):
-	-Generate and return one or more task ID numbers, but do not queue the task
-
--queue \<task_id> \<input_bundle> \<task_queued_from>:
-	-Indicates that the task can is ok to run as soon as its dependents are finished. and adds the name (or path) of the instructions bundle. Parsing of the instructions bundle name is the engine's responsibility.
-
--finish \<task_id>:
-	-Indicates that the task completed successfully.
-
--cancel \<task_id>:
-	-Cancel a task and all of its dependents.
-
--receive (\<submitted_instance_name>):
-	-Return the next task that is ready to run (i.e. queued, not cancelled, not started/running, not finished, all dependencies finished). submitted_instance_name is an optional argument that allows for tracking which engine or node ran the task.
-
--add_dependency \<parent_id> \<child_id>:
-	-Either use after assign but prior to queue, or dynamically add dependencies to already queued tasks (see P_A.py in the example).
+- assign (\<count>):
+	- Generate and return one or more task ID numbers, but do not queue the task
+- queue \<task_id> \<input_bundle> \<task_queued_from>:
+	- Indicates that the task can is ok to run as soon as its dependents are finished. and adds the name (or path) of the instructions bundle. Parsing of the instructions bundle name is the engine's responsibility.
+- finish \<task_id>:
+	- Indicates that the task completed successfully.
+- cancel \<task_id>:
+	- Cancel a task and all of its dependents.
+- receive (\<submitted_instance_name>):
+	- Return the next task that is ready to run (i.e. queued, not cancelled, not started/running, not finished, all dependencies finished). submitted_instance_name is an optional argument that allows for tracking which engine or node ran the task.
+- add_dependency \<parent_id> \<child_id>:
+	- Either use after assign but prior to queue, or dynamically add dependencies to already queued tasks (see P_A.py in the example).
 
 ## Compilation
 From empty "build" folder, run: 
@@ -44,16 +39,10 @@ make
 3) Run the "run.sh" script from the example's subdirectory
 
 ## Planned future additions
--Async_accept for sockets
-
--Logging thread
-
--Status query commands
-
--Requeue incomplete tasks upon server startup
-
--Remove_dependency function
-
--Job-specific binary files
-
--Scheduler process termination conditions
+- Async_accept for sockets
+- Logging thread
+- Status query commands
+- Requeue incomplete tasks upon server startup
+- Remove_dependency function
+- Job-specific binary files
+- Scheduler process termination conditions
