@@ -45,9 +45,15 @@ make
 
 ## Planned future additions
 -Async_accept for sockets
+
 -Logging thread
+
 -Status query commands
+
 -Requeue incomplete tasks upon server startup
+
 -Remove_dependency function
+
 -Job-specific binary files
+
 -Scheduler process termination conditions
