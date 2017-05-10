@@ -30,6 +30,7 @@ Depending on the command line arguments, the client can submit one of the follow
 From empty "build" folder, run: 
 
 cmake ..
+
 make
 
 ## Running examples
