@@ -1,10 +1,7 @@
 #include "scheduler.h"
 bool Scheduler::finished = 0;
-Scheduler::Scheduler(
-	TasksTable * pTasksTable
-): 
-	Listener("Scheduler"),
-	pTasksTable_(pTasksTable){
+Scheduler::Scheduler():
+	Listener("Scheduler"){
 };
 
 
@@ -52,12 +49,18 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 			int rowStartByte;
 			tasksRow tr;
 			for(int i = 0; i < request_assign.count(); i++){
-				tr = AssignNewID(rowStartByte);
+				tr = AssignNewID(
+					rowStartByte,
+					request_assign.job()
+				);
 				response_assign->add_ids(tr.id);
 			}
 		}else{
 			int rowStartByte;
-			tasksRow tr = AssignNewID(rowStartByte);
+			tasksRow tr = AssignNewID(
+				rowStartByte,
+				request_assign.job()
+			);
 			response_assign->set_id(tr.id);	
 		}
 		
@@ -68,6 +71,7 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 		schedulerMessages::Response_queue * response_queue = response->mutable_queue();  
 
 		Queue(
+			request_queue.job(),
 			request_queue.id(), 
 			request_queue.input_bundle(),
 			request_queue.task_queued_from()
@@ -98,7 +102,10 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 		const schedulerMessages::Request_requeue & request_requeue = request.requeue();
 		schedulerMessages::Response_requeue * response_requeue = response->mutable_requeue();  
 
-		bool requeue_failed = Requeue(request_requeue.id());
+		bool requeue_failed = Requeue(
+			request_requeue.job(),
+			request_requeue.id()
+		);
 		response_requeue->set_requeue_failed(requeue_failed);
 
 	}else if(request.has_finish()){
@@ -107,7 +114,10 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 		const schedulerMessages::Request_finish & request_finish = request.finish();
 		schedulerMessages::Response_finish * response_finish = response->mutable_finish();  
 
-		Finish(request_finish.id());
+		Finish(
+			request_finish.job(),
+			request_finish.id()
+		);
 	
 	}else if(request.has_cancel()){
 		//Needs to return:
@@ -115,7 +125,10 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 		const schedulerMessages::Request_cancel & request_cancel = request.cancel();
 		schedulerMessages::Response_cancel * response_cancel = response->mutable_cancel();  
 
-		Cancel(request_cancel.id());
+		Cancel(
+			request_cancel.job(),
+			request_cancel.id()
+		);
 	
 	}else if(request.has_add_dependency()){
 		//Needs to return:
@@ -123,7 +136,11 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 		const schedulerMessages::Request_add_dependency & request_add_dependency = request.add_dependency();
 		schedulerMessages::Response_add_dependency * response_add_dependency = response->mutable_add_dependency();  
 
-		AddDependency(request_add_dependency.child_id(), request_add_dependency.parent_id());
+		AddDependency(
+			request_add_dependency.job(),
+			request_add_dependency.child_id(), 
+			request_add_dependency.parent_id()
+		);
 	}else{
 		//shouldn't happen
 	}
@@ -131,16 +148,22 @@ boost::shared_ptr<schedulerMessages::Msg> Scheduler::Parse(boost::shared_ptr<sch
 	return(response_msg);
 };
 
-tasksRow Scheduler::AssignNewID(int & rowStartByte){
-	return(pTasksTable_->AssignNewID(rowStartByte));
+tasksRow Scheduler::AssignNewID(
+		int & rowStartByte, //Is rowStartByte still used?
+ 		std::string job
+ 	){
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	return(pTasksTable->AssignNewID(rowStartByte));
 };
 
 void Scheduler::Queue(
+	std::string job,
 	int id, 
 	std::string input_bundle_name,
 	int job_launched_from
 ){
-	pTasksTable_->Queue(
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	pTasksTable->Queue(
 		id,
 		input_bundle_name,
 		job_launched_from
@@ -148,34 +171,54 @@ void Scheduler::Queue(
 };
 
 tasksRow Scheduler::Receive(bool & taskFound, std::string submitted_instance){
-	return(pTasksTable_->Receive(taskFound, submitted_instance));
+	return(JobManager::Receive(taskFound, submitted_instance));
 };
 
-bool Scheduler::Requeue(int id){
-	return(pTasksTable_->Requeue(id));
+bool Scheduler::Requeue(
+	std::string job, 
+	int id
+){
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	return(pTasksTable->Requeue(id));
 };
 
-void Scheduler::Finish(int id){
-	pTasksTable_->Finish(id);
+void Scheduler::Finish(
+	std::string job,
+	int id
+){
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	pTasksTable->Finish(id);
 };
 
-void Scheduler::Cancel(int id){
-	pTasksTable_->Cancel(id);
+void Scheduler::Cancel(
+	std::string job,
+	int id
+){
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	pTasksTable->Cancel(id);
 };
 
-void Scheduler::AddDependency(int childID, int parentID){
-	pTasksTable_->AddDependency(childID, parentID);
+void Scheduler::AddDependency(
+	std::string job,
+	int childID, 
+	int parentID
+){
+	TasksTable * pTasksTable = JobManager::GetTasksTable(job);
+	pTasksTable->AddDependency(childID, parentID);
 }
 
-void Scheduler::AssignNewID_Multiple(int num_to_assign, std::vector<int> & result){
+void Scheduler::AssignNewID_Multiple( //Function not used?
+	std::string job,
+	int num_to_assign, 
+	std::vector<int> & result
+){
 	int rowStartByte;
 	tasksRow tr;
 	for(int i = 0; i < num_to_assign; i++){
-		tr = AssignNewID(rowStartByte);
+		tr = AssignNewID(rowStartByte,job);
 		result.push_back(tr.id);
 	}
 };
-
 
 void Scheduler::Log(boost::shared_ptr<Server_Request_Event> event){
 	boost::shared_ptr<schedulerMessages::Msg> msg = event->msg;
@@ -185,16 +228,20 @@ void Scheduler::Log(boost::shared_ptr<Server_Request_Event> event){
 		if(request.has_assign()){
 			const schedulerMessages::Request_assign & request_assign = request.assign();
 			printf("Assign:\n"
+				"\tjob: %s\n"
 				"\tcount: %d",
+				request_assign.job().c_str(),
 				request_assign.count());
 			//Fill in multiple
 		}else if(request.has_queue()){
 			const schedulerMessages::Request_queue & request_queue = request.queue();
 			printf(
 				"Queue:\n"
+				"\tjob: %s\n"
 				"\tid: %d\n"
 				"\tinput_bundle: %s\n"
 				"\ttask_queued_from: %d",
+				request_queue.job().c_str(),
 				(int)request_queue.id(), 
 				request_queue.input_bundle().c_str(),
 				(int)request_queue.task_queued_from()
@@ -210,29 +257,37 @@ void Scheduler::Log(boost::shared_ptr<Server_Request_Event> event){
 			const schedulerMessages::Request_requeue & request_requeue = request.requeue();
 			printf(
 				"Requeue:\n"
+				"\tjob: %s\n"
 				"\tid: %d",
+				request_requeue.job().c_str(),
 				(int)request_requeue.id()
 			);
 		}else if(request.has_finish()){
 			const schedulerMessages::Request_finish & request_finish = request.finish();
 			printf(
 				"Finish:\n"
+				"\tjob: %s\n"
 				"\tid: %d",
+				request_finish.job().c_str(),
 				(int)request_finish.id()
 			);
 		}else if(request.has_cancel()){
 			const schedulerMessages::Request_cancel & request_cancel = request.cancel();
 			printf(
 				"Cancel:\n"
+				"\tjob: %s\n"
 				"\tid: %d",
+				request_cancel.job().c_str(),
 				(int)request_cancel.id()
 			);
 		}else if(request.has_add_dependency()){
 			const schedulerMessages::Request_add_dependency & request_add_dependency = request.add_dependency();
 			printf(
 				"Add dependency:\n"
+				"\tjob: %s\n"
 				"\tchild_id: %d\n"
 				"\tparent_id: %d",
+				request_add_dependency.job().c_str(),
 				(int)request_add_dependency.child_id(),
 				(int)request_add_dependency.parent_id()
 			);
@@ -321,7 +376,8 @@ void Scheduler::HandleCmdLineInput(Scheduler & scheduler){
 		if(input == "q"){
 			finished = true;	
 		}else if(input == "p"){
-			scheduler.pTasksTable_->PrintAll();
+			//scheduler.pTasksTable_->PrintAll();
+			JobManager::PrintAll();
 		}else{
 			printf("command line input '%s' is not a command. Input 'q' to close\n",input.c_str());
 		}

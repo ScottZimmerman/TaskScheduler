@@ -6,6 +6,10 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <boost/filesystem.hpp>
+#include <boost/shared_ptr.hpp>
+#include "fileManager.h"
+#include "fileInterface.h"
 
 const int DEPENDENCY_DATA_MISSING = -1;
 
@@ -21,12 +25,16 @@ struct dependenciesMetadata {
 
 class DependenciesTable{
 	private:
-		std::fstream file_;
-		std::fstream metadata_file_;
+		boost::shared_ptr<FileInterface> dataFile_;
+		boost::shared_ptr<FileInterface> metadataFile_;
+
+		std::fstream * file_;
+		std::fstream * metadata_file_;
 		dependenciesMetadata metadata_;
 
 	public:
 		DependenciesTable();
+		DependenciesTable(boost::filesystem::path jobPath);
 		~DependenciesTable();
 
 		dependenciesRow GetRow(int id);

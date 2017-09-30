@@ -9,6 +9,10 @@
 #include <stdio.h>
 #include "dependenciesTable.h"
 #include "constants.h"
+#include <boost/filesystem.hpp>
+#include <boost/shared_ptr.hpp>
+#include "fileInterface.h"
+#include "fileManager.h"
 
 const unsigned int MAX_NUMBER_ATTEMPTS = 5;
 const int TASKS_ROW_NULL = -1;
@@ -44,13 +48,20 @@ struct tasksMetadata {
 
 class TasksTable{
 	private:
-		std::fstream file_;
-		std::fstream metadata_file_;
+		boost::shared_ptr<FileInterface> dataFile_;
+		boost::shared_ptr<FileInterface> metadataFile_;
+
+		std::fstream * file_;
+		std::fstream * metadata_file_;
 		tasksMetadata metadata_;
 		DependenciesTable * pDependencies_;
 
 	public:
-		TasksTable(DependenciesTable * pDependencies);
+		TasksTable();
+		TasksTable(
+			boost::filesystem::path jobPath, 
+			DependenciesTable * pDependencies
+		);
 		~TasksTable();
 
 		tasksRow GetRow(int id);

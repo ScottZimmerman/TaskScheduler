@@ -173,8 +173,9 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Response, _is_default_instance_));
   Request_assign_descriptor_ = file->message_type(3);
-  static const int Request_assign_offsets_[1] = {
+  static const int Request_assign_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_assign, count_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_assign, job_),
   };
   Request_assign_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -188,10 +189,11 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_assign, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_assign, _is_default_instance_));
   Request_queue_descriptor_ = file->message_type(4);
-  static const int Request_queue_offsets_[3] = {
+  static const int Request_queue_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_queue, id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_queue, input_bundle_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_queue, task_queued_from_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_queue, job_),
   };
   Request_queue_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -220,8 +222,9 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_receive, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_receive, _is_default_instance_));
   Request_requeue_descriptor_ = file->message_type(6);
-  static const int Request_requeue_offsets_[1] = {
+  static const int Request_requeue_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_requeue, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_requeue, job_),
   };
   Request_requeue_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -235,8 +238,9 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_requeue, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_requeue, _is_default_instance_));
   Request_finish_descriptor_ = file->message_type(7);
-  static const int Request_finish_offsets_[1] = {
+  static const int Request_finish_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_finish, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_finish, job_),
   };
   Request_finish_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -250,8 +254,9 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_finish, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_finish, _is_default_instance_));
   Request_cancel_descriptor_ = file->message_type(8);
-  static const int Request_cancel_offsets_[1] = {
+  static const int Request_cancel_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_cancel, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_cancel, job_),
   };
   Request_cancel_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -265,9 +270,10 @@ void protobuf_AssignDesc_msg_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_cancel, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_cancel, _is_default_instance_));
   Request_add_dependency_descriptor_ = file->message_type(9);
-  static const int Request_add_dependency_offsets_[2] = {
+  static const int Request_add_dependency_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_add_dependency, parent_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_add_dependency, child_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Request_add_dependency, job_),
   };
   Request_add_dependency_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -506,20 +512,22 @@ void protobuf_AddDesc_msg_2eproto() {
     "ANCEL\030\006 \001(\0132\".schedulerMessages.Response"
     "_cancelH\000\022D\n\016ADD_DEPENDENCY\030\007 \001(\0132*.sche"
     "dulerMessages.Response_add_dependencyH\000B"
-    "\006\n\004type\"\037\n\016Request_assign\022\r\n\005count\030\001 \001(\005"
-    "\"K\n\rRequest_queue\022\n\n\002id\030\001 \001(\005\022\024\n\014input_b"
-    "undle\030\002 \001(\t\022\030\n\020task_queued_from\030\003 \001(\005\"(\n"
-    "\017Request_receive\022\025\n\rinstance_name\030\001 \001(\t\""
-    "\035\n\017Request_requeue\022\n\n\002id\030\001 \001(\005\"\034\n\016Reques"
-    "t_finish\022\n\n\002id\030\001 \001(\005\"\034\n\016Request_cancel\022\n"
-    "\n\002id\030\001 \001(\005\"=\n\026Request_add_dependency\022\021\n\t"
-    "parent_id\030\001 \001(\005\022\020\n\010child_id\030\002 \001(\005\"<\n\017Res"
-    "ponse_assign\022\020\n\010multiple\030\001 \001(\010\022\n\n\002id\030\002 \001"
-    "(\005\022\013\n\003ids\030\003 \003(\005\"\020\n\016Response_queue\"(\n\020Res"
-    "ponse_receive\022\024\n\014input_bundle\030\001 \001(\t\"*\n\020R"
-    "esponse_requeue\022\026\n\016requeue_failed\030\001 \001(\010\""
-    "\021\n\017Response_finish\"\021\n\017Response_cancel\"\031\n"
-    "\027Response_add_dependencyb\006proto3", 1512);
+    "\006\n\004type\",\n\016Request_assign\022\r\n\005count\030\001 \001(\005"
+    "\022\013\n\003job\030\002 \001(\t\"X\n\rRequest_queue\022\n\n\002id\030\001 \001"
+    "(\005\022\024\n\014input_bundle\030\002 \001(\t\022\030\n\020task_queued_"
+    "from\030\003 \001(\005\022\013\n\003job\030\004 \001(\t\"(\n\017Request_recei"
+    "ve\022\025\n\rinstance_name\030\001 \001(\t\"*\n\017Request_req"
+    "ueue\022\n\n\002id\030\001 \001(\005\022\013\n\003job\030\002 \001(\t\")\n\016Request"
+    "_finish\022\n\n\002id\030\001 \001(\005\022\013\n\003job\030\002 \001(\t\")\n\016Requ"
+    "est_cancel\022\n\n\002id\030\001 \001(\005\022\013\n\003job\030\002 \001(\t\"J\n\026R"
+    "equest_add_dependency\022\021\n\tparent_id\030\001 \001(\005"
+    "\022\020\n\010child_id\030\002 \001(\005\022\013\n\003job\030\003 \001(\t\"<\n\017Respo"
+    "nse_assign\022\020\n\010multiple\030\001 \001(\010\022\n\n\002id\030\002 \001(\005"
+    "\022\013\n\003ids\030\003 \003(\005\"\020\n\016Response_queue\"(\n\020Respo"
+    "nse_receive\022\024\n\014input_bundle\030\001 \001(\t\"*\n\020Res"
+    "ponse_requeue\022\026\n\016requeue_failed\030\001 \001(\010\"\021\n"
+    "\017Response_finish\"\021\n\017Response_cancel\"\031\n\027R"
+    "esponse_add_dependencyb\006proto3", 1590);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "msg.proto", &protobuf_RegisterTypes);
   Msg::default_instance_ = new Msg();
@@ -2698,6 +2706,7 @@ Response::TypeCase Response::type_case() const {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request_assign::kCountFieldNumber;
+const int Request_assign::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_assign::Request_assign()
@@ -2720,8 +2729,10 @@ Request_assign::Request_assign(const Request_assign& from)
 
 void Request_assign::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   count_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_assign::~Request_assign() {
@@ -2730,6 +2741,7 @@ Request_assign::~Request_assign() {
 }
 
 void Request_assign::SharedDtor() {
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -2762,6 +2774,7 @@ Request_assign* Request_assign::New(::google::protobuf::Arena* arena) const {
 void Request_assign::Clear() {
 // @@protoc_insertion_point(message_clear_start:schedulerMessages.Request_assign)
   count_ = 0;
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Request_assign::MergePartialFromCodedStream(
@@ -2781,6 +2794,23 @@ bool Request_assign::MergePartialFromCodedStream(
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &count_)));
 
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_assign.job"));
         } else {
           goto handle_unusual;
         }
@@ -2817,6 +2847,16 @@ void Request_assign::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->count(), output);
   }
 
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_assign.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_assign)
 }
 
@@ -2827,6 +2867,17 @@ void Request_assign::SerializeWithCachedSizes(
   // optional int32 count = 1;
   if (this->count() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->count(), target);
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_assign.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_assign)
@@ -2842,6 +2893,13 @@ int Request_assign::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->count());
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -2875,6 +2933,10 @@ void Request_assign::MergeFrom(const Request_assign& from) {
   if (from.count() != 0) {
     set_count(from.count());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_assign::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2902,6 +2964,7 @@ void Request_assign::Swap(Request_assign* other) {
 }
 void Request_assign::InternalSwap(Request_assign* other) {
   std::swap(count_, other->count_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -2931,6 +2994,50 @@ void Request_assign::clear_count() {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_assign.count)
 }
 
+// optional string job = 2;
+void Request_assign::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_assign::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_assign.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_assign::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_assign.job)
+}
+ void Request_assign::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_assign.job)
+}
+ void Request_assign::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_assign.job)
+}
+ ::std::string* Request_assign::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_assign.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_assign::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_assign.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_assign::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_assign.job)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -2939,6 +3046,7 @@ void Request_assign::clear_count() {
 const int Request_queue::kIdFieldNumber;
 const int Request_queue::kInputBundleFieldNumber;
 const int Request_queue::kTaskQueuedFromFieldNumber;
+const int Request_queue::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_queue::Request_queue()
@@ -2966,6 +3074,7 @@ void Request_queue::SharedCtor() {
   id_ = 0;
   input_bundle_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   task_queued_from_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_queue::~Request_queue() {
@@ -2975,6 +3084,7 @@ Request_queue::~Request_queue() {
 
 void Request_queue::SharedDtor() {
   input_bundle_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -3024,6 +3134,7 @@ void Request_queue::Clear() {
 
   ZR_(id_, task_queued_from_);
   input_bundle_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 
 #undef ZR_HELPER_
 #undef ZR_
@@ -3082,6 +3193,23 @@ bool Request_queue::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(34)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_queue.job"));
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -3130,6 +3258,16 @@ void Request_queue::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->task_queued_from(), output);
   }
 
+  // optional string job = 4;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_queue.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_queue)
 }
 
@@ -3156,6 +3294,17 @@ void Request_queue::SerializeWithCachedSizes(
   // optional int32 task_queued_from = 3;
   if (this->task_queued_from() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->task_queued_from(), target);
+  }
+
+  // optional string job = 4;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_queue.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_queue)
@@ -3185,6 +3334,13 @@ int Request_queue::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->task_queued_from());
+  }
+
+  // optional string job = 4;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -3225,6 +3381,10 @@ void Request_queue::MergeFrom(const Request_queue& from) {
   if (from.task_queued_from() != 0) {
     set_task_queued_from(from.task_queued_from());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_queue::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3254,6 +3414,7 @@ void Request_queue::InternalSwap(Request_queue* other) {
   std::swap(id_, other->id_);
   input_bundle_.Swap(&other->input_bundle_);
   std::swap(task_queued_from_, other->task_queued_from_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -3339,6 +3500,50 @@ void Request_queue::clear_task_queued_from() {
   
   task_queued_from_ = value;
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_queue.task_queued_from)
+}
+
+// optional string job = 4;
+void Request_queue::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_queue::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_queue.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_queue::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_queue.job)
+}
+ void Request_queue::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_queue.job)
+}
+ void Request_queue::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_queue.job)
+}
+ ::std::string* Request_queue::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_queue.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_queue::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_queue.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_queue::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_queue.job)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3632,6 +3837,7 @@ void Request_receive::clear_instance_name() {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request_requeue::kIdFieldNumber;
+const int Request_requeue::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_requeue::Request_requeue()
@@ -3654,8 +3860,10 @@ Request_requeue::Request_requeue(const Request_requeue& from)
 
 void Request_requeue::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   id_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_requeue::~Request_requeue() {
@@ -3664,6 +3872,7 @@ Request_requeue::~Request_requeue() {
 }
 
 void Request_requeue::SharedDtor() {
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -3696,6 +3905,7 @@ Request_requeue* Request_requeue::New(::google::protobuf::Arena* arena) const {
 void Request_requeue::Clear() {
 // @@protoc_insertion_point(message_clear_start:schedulerMessages.Request_requeue)
   id_ = 0;
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Request_requeue::MergePartialFromCodedStream(
@@ -3715,6 +3925,23 @@ bool Request_requeue::MergePartialFromCodedStream(
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
 
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_requeue.job"));
         } else {
           goto handle_unusual;
         }
@@ -3751,6 +3978,16 @@ void Request_requeue::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
   }
 
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_requeue.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_requeue)
 }
 
@@ -3761,6 +3998,17 @@ void Request_requeue::SerializeWithCachedSizes(
   // optional int32 id = 1;
   if (this->id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_requeue.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_requeue)
@@ -3776,6 +4024,13 @@ int Request_requeue::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->id());
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -3809,6 +4064,10 @@ void Request_requeue::MergeFrom(const Request_requeue& from) {
   if (from.id() != 0) {
     set_id(from.id());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_requeue::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3836,6 +4095,7 @@ void Request_requeue::Swap(Request_requeue* other) {
 }
 void Request_requeue::InternalSwap(Request_requeue* other) {
   std::swap(id_, other->id_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -3865,12 +4125,57 @@ void Request_requeue::clear_id() {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_requeue.id)
 }
 
+// optional string job = 2;
+void Request_requeue::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_requeue::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_requeue.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_requeue::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_requeue.job)
+}
+ void Request_requeue::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_requeue.job)
+}
+ void Request_requeue::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_requeue.job)
+}
+ ::std::string* Request_requeue::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_requeue.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_requeue::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_requeue.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_requeue::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_requeue.job)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request_finish::kIdFieldNumber;
+const int Request_finish::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_finish::Request_finish()
@@ -3893,8 +4198,10 @@ Request_finish::Request_finish(const Request_finish& from)
 
 void Request_finish::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   id_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_finish::~Request_finish() {
@@ -3903,6 +4210,7 @@ Request_finish::~Request_finish() {
 }
 
 void Request_finish::SharedDtor() {
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -3935,6 +4243,7 @@ Request_finish* Request_finish::New(::google::protobuf::Arena* arena) const {
 void Request_finish::Clear() {
 // @@protoc_insertion_point(message_clear_start:schedulerMessages.Request_finish)
   id_ = 0;
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Request_finish::MergePartialFromCodedStream(
@@ -3954,6 +4263,23 @@ bool Request_finish::MergePartialFromCodedStream(
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
 
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_finish.job"));
         } else {
           goto handle_unusual;
         }
@@ -3990,6 +4316,16 @@ void Request_finish::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
   }
 
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_finish.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_finish)
 }
 
@@ -4000,6 +4336,17 @@ void Request_finish::SerializeWithCachedSizes(
   // optional int32 id = 1;
   if (this->id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_finish.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_finish)
@@ -4015,6 +4362,13 @@ int Request_finish::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->id());
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -4048,6 +4402,10 @@ void Request_finish::MergeFrom(const Request_finish& from) {
   if (from.id() != 0) {
     set_id(from.id());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_finish::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4075,6 +4433,7 @@ void Request_finish::Swap(Request_finish* other) {
 }
 void Request_finish::InternalSwap(Request_finish* other) {
   std::swap(id_, other->id_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -4104,12 +4463,57 @@ void Request_finish::clear_id() {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_finish.id)
 }
 
+// optional string job = 2;
+void Request_finish::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_finish::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_finish.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_finish::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_finish.job)
+}
+ void Request_finish::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_finish.job)
+}
+ void Request_finish::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_finish.job)
+}
+ ::std::string* Request_finish::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_finish.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_finish::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_finish.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_finish::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_finish.job)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request_cancel::kIdFieldNumber;
+const int Request_cancel::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_cancel::Request_cancel()
@@ -4132,8 +4536,10 @@ Request_cancel::Request_cancel(const Request_cancel& from)
 
 void Request_cancel::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   id_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_cancel::~Request_cancel() {
@@ -4142,6 +4548,7 @@ Request_cancel::~Request_cancel() {
 }
 
 void Request_cancel::SharedDtor() {
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -4174,6 +4581,7 @@ Request_cancel* Request_cancel::New(::google::protobuf::Arena* arena) const {
 void Request_cancel::Clear() {
 // @@protoc_insertion_point(message_clear_start:schedulerMessages.Request_cancel)
   id_ = 0;
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Request_cancel::MergePartialFromCodedStream(
@@ -4193,6 +4601,23 @@ bool Request_cancel::MergePartialFromCodedStream(
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
 
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(18)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 2;
+      case 2: {
+        if (tag == 18) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_cancel.job"));
         } else {
           goto handle_unusual;
         }
@@ -4229,6 +4654,16 @@ void Request_cancel::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
   }
 
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_cancel.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_cancel)
 }
 
@@ -4239,6 +4674,17 @@ void Request_cancel::SerializeWithCachedSizes(
   // optional int32 id = 1;
   if (this->id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_cancel.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_cancel)
@@ -4254,6 +4700,13 @@ int Request_cancel::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->id());
+  }
+
+  // optional string job = 2;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -4287,6 +4740,10 @@ void Request_cancel::MergeFrom(const Request_cancel& from) {
   if (from.id() != 0) {
     set_id(from.id());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_cancel::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4314,6 +4771,7 @@ void Request_cancel::Swap(Request_cancel* other) {
 }
 void Request_cancel::InternalSwap(Request_cancel* other) {
   std::swap(id_, other->id_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -4343,6 +4801,50 @@ void Request_cancel::clear_id() {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_cancel.id)
 }
 
+// optional string job = 2;
+void Request_cancel::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_cancel::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_cancel.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_cancel::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_cancel.job)
+}
+ void Request_cancel::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_cancel.job)
+}
+ void Request_cancel::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_cancel.job)
+}
+ ::std::string* Request_cancel::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_cancel.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_cancel::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_cancel.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_cancel::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_cancel.job)
+}
+
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
@@ -4350,6 +4852,7 @@ void Request_cancel::clear_id() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Request_add_dependency::kParentIdFieldNumber;
 const int Request_add_dependency::kChildIdFieldNumber;
+const int Request_add_dependency::kJobFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Request_add_dependency::Request_add_dependency()
@@ -4372,9 +4875,11 @@ Request_add_dependency::Request_add_dependency(const Request_add_dependency& fro
 
 void Request_add_dependency::SharedCtor() {
     _is_default_instance_ = false;
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
   parent_id_ = 0;
   child_id_ = 0;
+  job_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Request_add_dependency::~Request_add_dependency() {
@@ -4383,6 +4888,7 @@ Request_add_dependency::~Request_add_dependency() {
 }
 
 void Request_add_dependency::SharedDtor() {
+  job_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -4431,6 +4937,7 @@ void Request_add_dependency::Clear() {
 } while (0)
 
   ZR_(parent_id_, child_id_);
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 
 #undef ZR_HELPER_
 #undef ZR_
@@ -4472,6 +4979,23 @@ bool Request_add_dependency::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(26)) goto parse_job;
+        break;
+      }
+
+      // optional string job = 3;
+      case 3: {
+        if (tag == 26) {
+         parse_job:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_job()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->job().data(), this->job().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "schedulerMessages.Request_add_dependency.job"));
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -4510,6 +5034,16 @@ void Request_add_dependency::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->child_id(), output);
   }
 
+  // optional string job = 3;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_add_dependency.job");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      3, this->job(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:schedulerMessages.Request_add_dependency)
 }
 
@@ -4525,6 +5059,17 @@ void Request_add_dependency::SerializeWithCachedSizes(
   // optional int32 child_id = 2;
   if (this->child_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->child_id(), target);
+  }
+
+  // optional string job = 3;
+  if (this->job().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->job().data(), this->job().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "schedulerMessages.Request_add_dependency.job");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->job(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:schedulerMessages.Request_add_dependency)
@@ -4547,6 +5092,13 @@ int Request_add_dependency::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->child_id());
+  }
+
+  // optional string job = 3;
+  if (this->job().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->job());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -4583,6 +5135,10 @@ void Request_add_dependency::MergeFrom(const Request_add_dependency& from) {
   if (from.child_id() != 0) {
     set_child_id(from.child_id());
   }
+  if (from.job().size() > 0) {
+
+    job_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.job_);
+  }
 }
 
 void Request_add_dependency::CopyFrom(const ::google::protobuf::Message& from) {
@@ -4611,6 +5167,7 @@ void Request_add_dependency::Swap(Request_add_dependency* other) {
 void Request_add_dependency::InternalSwap(Request_add_dependency* other) {
   std::swap(parent_id_, other->parent_id_);
   std::swap(child_id_, other->child_id_);
+  job_.Swap(&other->job_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -4652,6 +5209,50 @@ void Request_add_dependency::clear_child_id() {
   
   child_id_ = value;
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_add_dependency.child_id)
+}
+
+// optional string job = 3;
+void Request_add_dependency::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Request_add_dependency::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_add_dependency.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_add_dependency::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_add_dependency.job)
+}
+ void Request_add_dependency::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_add_dependency.job)
+}
+ void Request_add_dependency::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_add_dependency.job)
+}
+ ::std::string* Request_add_dependency::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_add_dependency.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Request_add_dependency::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_add_dependency.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Request_add_dependency::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_add_dependency.job)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

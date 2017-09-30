@@ -1,49 +1,43 @@
 #include "tasksTable.h"
 using namespace std;
-TasksTable::TasksTable(DependenciesTable * pDependencies){
-	std::string tasksbin =  "tasks.bin";
-	std::string tasksMetadatabin =  "tasksMetadata.bin";
-    file_.open(tasksbin.c_str(), fstream::in | fstream::out | fstream::binary);
-    if(!file_.is_open()){
-    	file_.open(tasksbin.c_str(), fstream::out | fstream::binary);
-    	file_.close();
-    	file_.open(tasksbin.c_str(), fstream::in | fstream::out | fstream::binary);
-    }
-	
-	metadata_file_.open(tasksMetadatabin.c_str(), fstream::in | fstream::out | fstream::binary);
+TasksTable::TasksTable(){};
+TasksTable::TasksTable(
+	boost::filesystem::path jobPath, 
+	DependenciesTable * pDependencies
+)
+{
+	dataFile_ = FileManager::Get(jobPath / "tasks.bin");
+	metadataFile_ = FileManager::Get(jobPath / "tasksMetadata.bin");
 
-    if(!metadata_file_.is_open()){
-    	metadata_file_.open(tasksMetadatabin.c_str(), fstream::out | fstream::binary);
-    	metadata_file_.close();
-    	metadata_file_.open(tasksMetadatabin.c_str(), fstream::in | fstream::out | fstream::binary);
-    }
+	file_ = dataFile_->Get();
+	metadata_file_ = metadataFile_->Get();
 
-    //Load metadata
-	metadata_file_.seekg(0, ios::end);
-	size_t metadataFileSize = metadata_file_.tellg();
+	//Load metadata
+	metadata_file_->seekg(0, ios::end);
+	size_t metadataFileSize = metadata_file_->tellg();
 
     if(metadataFileSize == 0){
     	tasksMetadata metadata;
     	metadata.maxID = 0;
-	    metadata_file_.seekg(0, ios::beg);
-    	metadata_file_.write((char*)&metadata, (int)sizeof(tasksMetadata));
-    	metadata_file_.seekg(0, ios::beg);
+	    metadata_file_->seekg(0, ios::beg);
+    	metadata_file_->write((char*)&metadata, (int)sizeof(tasksMetadata));
+    	metadata_file_->seekg(0, ios::beg);
     }
 
-    metadata_file_.seekg(0, ios::beg);
-    metadata_file_.read((char*)&metadata_, (int)sizeof(tasksMetadata));
+    metadata_file_->seekg(0, ios::beg);
+    metadata_file_->read((char*)&metadata_, (int)sizeof(tasksMetadata));
 
   	pDependencies_ = pDependencies;
  };
 
 TasksTable::~TasksTable(){
-    if(file_.is_open()){
-    	file_.close();
+    if(file_->is_open()){
+    	file_->close();
 	}
-	if(metadata_file_.is_open()){
-		metadata_file_.seekg(0, ios::beg);
-    	metadata_file_.write((char*)&metadata_, (int)sizeof(tasksMetadata));
-    	metadata_file_.close();
+	if(metadata_file_->is_open()){
+		metadata_file_->seekg(0, ios::beg);
+    	metadata_file_->write((char*)&metadata_, (int)sizeof(tasksMetadata));
+    	metadata_file_->close();
 	}
 };
 
@@ -66,9 +60,9 @@ tasksRow TasksTable::GetRow(int id, int & rowStartByte){
 
 tasksRow TasksTable::GetRow(int id, bool & success,  int & rowStartByte){
 	tasksRow currentRow;
-	if(file_.is_open()){
-		file_.seekg(0, ios::end);
-		size_t fileSize = file_.tellg();
+	if(file_->is_open()){
+		file_->seekg(0, ios::end);
+		size_t fileSize = file_->tellg();
 		int rowSize = (int)sizeof(tasksRow);
 		int nRows = fileSize/rowSize;
 
@@ -85,8 +79,8 @@ tasksRow TasksTable::GetRow(int id, bool & success,  int & rowStartByte){
 			}else{
 				M = floor(((double)L+(double)R)/2.0);
 				rowStartByte = rowSize*M; 
-				file_.seekg(rowStartByte, ios::beg);
-				file_.read((char*)&currentRow, rowSize);
+				file_->seekg(rowStartByte, ios::beg);
+				file_->read((char*)&currentRow, rowSize);
 				
 				if(currentRow.id < id){
 					L = M+1;
@@ -113,9 +107,9 @@ void TasksTable::PrintAll(){
 	printf("=======================REPORT=START====================\n");
 	pDependencies_->PrintAll();
 	printf("TasksTable::PrintAll\n");
-	if(file_.is_open()){
-		file_.seekg(0, ios::end);
-		size_t fileSize = file_.tellg();
+	if(file_->is_open()){
+		file_->seekg(0, ios::end);
+		size_t fileSize = file_->tellg();
 		int rowSize = (int)sizeof(tasksRow);
 		int nRows = fileSize/rowSize;
 
@@ -125,9 +119,9 @@ void TasksTable::PrintAll(){
 		
 		if(nRows > 0){
 			tasksRow currentRow;
-			file_.seekg(0, ios::beg);
+			file_->seekg(0, ios::beg);
 			for(int rowIndex = 0; rowIndex < nRows; rowIndex++){
-				file_.read((char*)&currentRow, rowSize);
+				file_->read((char*)&currentRow, rowSize);
 				printf("%d: ",rowIndex);
 				std::cout << currentRow << std::endl;
 			}
@@ -163,16 +157,16 @@ tasksRow TasksTable::AssignNewID(int & rowStartByte){
 	//Set default values
 	SetRowToDefault(newRow);
 	
-	if(file_.is_open()){
-		file_.seekg(0, ios::end);
-		size_t fileSize = file_.tellg();
+	if(file_->is_open()){
+		file_->seekg(0, ios::end);
+		size_t fileSize = file_->tellg();
 		rowStartByte = (int)fileSize;
-		file_.write((char*)&newRow,(int)sizeof(tasksRow));
+		file_->write((char*)&newRow,(int)sizeof(tasksRow));
 	}
-	if(metadata_file_.is_open()){
-		metadata_file_.seekg(0, ios::beg);
-    	metadata_file_.write((char*)&metadata_, (int)sizeof(tasksMetadata));
-		metadata_file_.seekg(0, ios::beg);
+	if(metadata_file_->is_open()){
+		metadata_file_->seekg(0, ios::beg);
+    	metadata_file_->write((char*)&metadata_, (int)sizeof(tasksMetadata));
+		metadata_file_->seekg(0, ios::beg);
 	}
 	
 	return(newRow);
@@ -181,9 +175,9 @@ tasksRow TasksTable::AssignNewID(int & rowStartByte){
 void TasksTable::ModifyRow(tasksRow row, int rowStartByte){
 	//printf("Modifying TasksTable Row (rowStartByte = %d)\n",rowStartByte);
 	//std::cout << row << endl;
-	if(file_.is_open()){
-		file_.seekg(rowStartByte, ios::beg);
-		file_.write((char*)&row,(int)sizeof(tasksRow));
+	if(file_->is_open()){
+		file_->seekg(rowStartByte, ios::beg);
+		file_->write((char*)&row,(int)sizeof(tasksRow));
 	}
 };
 
@@ -218,19 +212,19 @@ tasksRow TasksTable::Receive(
 	bool thisTaskReady;
 	bool thisTaskParentsFinished;
 
-	if(file_.is_open()){
-		file_.seekg(0, ios::end);
-		size_t fileSize = file_.tellg();
+	if(file_->is_open()){
+		file_->seekg(0, ios::end);
+		size_t fileSize = file_->tellg();
 		int rowSize = (int)sizeof(tasksRow);
 		int nRows = fileSize/rowSize;
 
 		if(nRows > 0){
 			tasksRow currentRow;
-			file_.seekg(0, ios::beg);
+			file_->seekg(0, ios::beg);
 			for(int rowIndex = 0; rowIndex < nRows; rowIndex++){
 				if(taskFound == 0){
-					file_.seekg(rowSize*rowIndex,ios::beg);
-					file_.read((char*)&currentRow, rowSize);
+					file_->seekg(rowSize*rowIndex,ios::beg);
+					file_->read((char*)&currentRow, rowSize);
 					thisTaskReady = (currentRow.entered_queue != TASKS_ROW_NULL);
 					thisTaskReady *= (currentRow.exited_queue == TASKS_ROW_NULL);
 					thisTaskReady *= (currentRow.finished_time == TASKS_ROW_NULL);

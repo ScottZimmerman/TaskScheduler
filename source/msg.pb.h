@@ -581,11 +581,23 @@ class Request_assign : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::int32 count() const;
   void set_count(::google::protobuf::int32 value);
 
+  // optional string job = 2;
+  void clear_job();
+  static const int kJobFieldNumber = 2;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_assign)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   ::google::protobuf::int32 count_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
@@ -680,6 +692,17 @@ class Request_queue : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::int32 task_queued_from() const;
   void set_task_queued_from(::google::protobuf::int32 value);
 
+  // optional string job = 4;
+  void clear_job();
+  static const int kJobFieldNumber = 4;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_queue)
  private:
 
@@ -688,6 +711,7 @@ class Request_queue : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::internal::ArenaStringPtr input_bundle_;
   ::google::protobuf::int32 id_;
   ::google::protobuf::int32 task_queued_from_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
   friend void protobuf_AssignDesc_msg_2eproto();
@@ -851,11 +875,23 @@ class Request_requeue : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::int32 id() const;
   void set_id(::google::protobuf::int32 value);
 
+  // optional string job = 2;
+  void clear_job();
+  static const int kJobFieldNumber = 2;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_requeue)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   ::google::protobuf::int32 id_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
@@ -933,11 +969,23 @@ class Request_finish : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::int32 id() const;
   void set_id(::google::protobuf::int32 value);
 
+  // optional string job = 2;
+  void clear_job();
+  static const int kJobFieldNumber = 2;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_finish)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   ::google::protobuf::int32 id_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
@@ -1015,11 +1063,23 @@ class Request_cancel : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::int32 id() const;
   void set_id(::google::protobuf::int32 value);
 
+  // optional string job = 2;
+  void clear_job();
+  static const int kJobFieldNumber = 2;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_cancel)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   ::google::protobuf::int32 id_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
@@ -1103,6 +1163,17 @@ class Request_add_dependency : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::int32 child_id() const;
   void set_child_id(::google::protobuf::int32 value);
 
+  // optional string job = 3;
+  void clear_job();
+  static const int kJobFieldNumber = 3;
+  const ::std::string& job() const;
+  void set_job(const ::std::string& value);
+  void set_job(const char* value);
+  void set_job(const char* value, size_t size);
+  ::std::string* mutable_job();
+  ::std::string* release_job();
+  void set_allocated_job(::std::string* job);
+
   // @@protoc_insertion_point(class_scope:schedulerMessages.Request_add_dependency)
  private:
 
@@ -1110,6 +1181,7 @@ class Request_add_dependency : public ::google::protobuf::Message /* @@protoc_in
   bool _is_default_instance_;
   ::google::protobuf::int32 parent_id_;
   ::google::protobuf::int32 child_id_;
+  ::google::protobuf::internal::ArenaStringPtr job_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_msg_2eproto();
   friend void protobuf_AssignDesc_msg_2eproto();
@@ -2519,6 +2591,50 @@ inline void Request_assign::set_count(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_assign.count)
 }
 
+// optional string job = 2;
+inline void Request_assign::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_assign::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_assign.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_assign::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_assign.job)
+}
+inline void Request_assign::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_assign.job)
+}
+inline void Request_assign::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_assign.job)
+}
+inline ::std::string* Request_assign::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_assign.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_assign::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_assign.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_assign::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_assign.job)
+}
+
 // -------------------------------------------------------------------
 
 // Request_queue
@@ -2595,6 +2711,50 @@ inline void Request_queue::set_task_queued_from(::google::protobuf::int32 value)
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_queue.task_queued_from)
 }
 
+// optional string job = 4;
+inline void Request_queue::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_queue::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_queue.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_queue::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_queue.job)
+}
+inline void Request_queue::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_queue.job)
+}
+inline void Request_queue::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_queue.job)
+}
+inline ::std::string* Request_queue::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_queue.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_queue::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_queue.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_queue::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_queue.job)
+}
+
 // -------------------------------------------------------------------
 
 // Request_receive
@@ -2661,6 +2821,50 @@ inline void Request_requeue::set_id(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_requeue.id)
 }
 
+// optional string job = 2;
+inline void Request_requeue::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_requeue::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_requeue.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_requeue::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_requeue.job)
+}
+inline void Request_requeue::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_requeue.job)
+}
+inline void Request_requeue::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_requeue.job)
+}
+inline ::std::string* Request_requeue::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_requeue.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_requeue::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_requeue.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_requeue::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_requeue.job)
+}
+
 // -------------------------------------------------------------------
 
 // Request_finish
@@ -2679,6 +2883,50 @@ inline void Request_finish::set_id(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_finish.id)
 }
 
+// optional string job = 2;
+inline void Request_finish::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_finish::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_finish.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_finish::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_finish.job)
+}
+inline void Request_finish::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_finish.job)
+}
+inline void Request_finish::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_finish.job)
+}
+inline ::std::string* Request_finish::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_finish.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_finish::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_finish.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_finish::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_finish.job)
+}
+
 // -------------------------------------------------------------------
 
 // Request_cancel
@@ -2695,6 +2943,50 @@ inline void Request_cancel::set_id(::google::protobuf::int32 value) {
   
   id_ = value;
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_cancel.id)
+}
+
+// optional string job = 2;
+inline void Request_cancel::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_cancel::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_cancel.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_cancel::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_cancel.job)
+}
+inline void Request_cancel::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_cancel.job)
+}
+inline void Request_cancel::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_cancel.job)
+}
+inline ::std::string* Request_cancel::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_cancel.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_cancel::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_cancel.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_cancel::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_cancel.job)
 }
 
 // -------------------------------------------------------------------
@@ -2727,6 +3019,50 @@ inline void Request_add_dependency::set_child_id(::google::protobuf::int32 value
   
   child_id_ = value;
   // @@protoc_insertion_point(field_set:schedulerMessages.Request_add_dependency.child_id)
+}
+
+// optional string job = 3;
+inline void Request_add_dependency::clear_job() {
+  job_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Request_add_dependency::job() const {
+  // @@protoc_insertion_point(field_get:schedulerMessages.Request_add_dependency.job)
+  return job_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_add_dependency::set_job(const ::std::string& value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:schedulerMessages.Request_add_dependency.job)
+}
+inline void Request_add_dependency::set_job(const char* value) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:schedulerMessages.Request_add_dependency.job)
+}
+inline void Request_add_dependency::set_job(const char* value, size_t size) {
+  
+  job_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:schedulerMessages.Request_add_dependency.job)
+}
+inline ::std::string* Request_add_dependency::mutable_job() {
+  
+  // @@protoc_insertion_point(field_mutable:schedulerMessages.Request_add_dependency.job)
+  return job_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Request_add_dependency::release_job() {
+  // @@protoc_insertion_point(field_release:schedulerMessages.Request_add_dependency.job)
+  
+  return job_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Request_add_dependency::set_allocated_job(::std::string* job) {
+  if (job != NULL) {
+    
+  } else {
+    
+  }
+  job_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), job);
+  // @@protoc_insertion_point(field_set_allocated:schedulerMessages.Request_add_dependency.job)
 }
 
 // -------------------------------------------------------------------

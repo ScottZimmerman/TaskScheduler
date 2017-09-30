@@ -5,7 +5,7 @@ project (Task_Scheduler)
 
 #Boost libraries
 set(Boost_USE_STATIC_LIBS   ON)
-find_package(Boost REQUIRED COMPONENTS system thread timer chrono)
+find_package(Boost REQUIRED COMPONENTS system thread timer chrono filesystem)
 find_package(Threads)
 add_library(boost INTERFACE IMPORTED)
 set_property(TARGET boost PROPERTY
@@ -32,6 +32,14 @@ add_executable(
 	source/event.h
 	source/eventQueue.h
 	source/eventQueue.cpp
+	source/fileInterface.h
+	source/fileInterface.cpp
+	source/fileManager.h
+	source/fileManager.cpp
+	source/job.h
+	source/job.cpp
+	source/jobManager.h
+	source/jobManager.cpp
 	source/listener.h
 	source/listener.cpp
 	source/scheduler.h
@@ -54,6 +62,7 @@ target_link_libraries(server
 	${Boost_THREAD_LIBRARY}
 	${Boost_TIMER_LIBRARY}
 	${Boost_CHRONO_LIBRARY}
+	${Boost_FILESYSTEM_LIBRARY}
 	${CMAKE_THREAD_LIBS_INIT}
 	pthread
 	rt

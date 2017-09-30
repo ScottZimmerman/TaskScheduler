@@ -37,31 +37,35 @@ message Response
 	}
 }
 
-
-
 message Request_assign{
 	int32 count = 1;
+	string job = 2;
 }
 message Request_queue{
 	int32 id = 1;
 	string input_bundle = 2;
 	int32 task_queued_from = 3;
+	string job = 4;
 }
 message Request_receive{
 	string instance_name = 1;
 }
 message Request_requeue{
 	int32 id = 1;
+	string job = 2;
 }
 message Request_finish{
 	int32 id = 1;
+	string job = 2;
 }
 message Request_cancel{
 	int32 id = 1;	
+	string job = 2;
 }
 message Request_add_dependency{
 	int32 parent_id = 1;
 	int32 child_id = 2;
+	string job = 3;
 }
 
 

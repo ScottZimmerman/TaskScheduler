@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.cpp
+/home/a/Desktop/SCHEDULER/source/connection.cpp
 connection.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+/home/a/Desktop/SCHEDULER/source/connection.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+/home/a/Desktop/SCHEDULER/source/connection.h
 stdio.h
 -
 stdlib.h
@@ -26,27 +26,27 @@ sys/socket.h
 netinet/in.h
 -
 listener.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+/home/a/Desktop/SCHEDULER/source/listener.h
 event.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
 constants.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
 msg.pb.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+/home/a/Desktop/SCHEDULER/source/msg.pb.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.cpp
+/home/a/Desktop/SCHEDULER/source/connectionManager.cpp
 connectionManager.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+/home/a/Desktop/SCHEDULER/source/connectionManager.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+/home/a/Desktop/SCHEDULER/source/connectionManager.h
 cerrno
 -
 connection.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.h
+/home/a/Desktop/SCHEDULER/source/connection.h
 constants.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
 msg.pb.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+/home/a/Desktop/SCHEDULER/source/msg.pb.h
 boost/thread/thread.hpp
 -
 boost/bind.hpp
@@ -54,13 +54,17 @@ boost/bind.hpp
 boost/ref.hpp
 -
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
+iostream
+-
+string.h
+-
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.cpp
+/home/a/Desktop/SCHEDULER/source/dependenciesTable.cpp
 dependenciesTable.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+/home/a/Desktop/SCHEDULER/source/dependenciesTable.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+/home/a/Desktop/SCHEDULER/source/dependenciesTable.h
 fstream
 -
 math.h
@@ -71,20 +75,28 @@ vector
 -
 algorithm
 -
+boost/filesystem.hpp
+-
+boost/shared_ptr.hpp
+-
+fileManager.h
+/home/a/Desktop/SCHEDULER/source/fileManager.h
+fileInterface.h
+/home/a/Desktop/SCHEDULER/source/fileInterface.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
 string
 -
 boost/shared_ptr.hpp
 -
 msg.pb.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+/home/a/Desktop/SCHEDULER/source/msg.pb.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.cpp
+/home/a/Desktop/SCHEDULER/source/eventQueue.cpp
 eventQueue.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+/home/a/Desktop/SCHEDULER/source/eventQueue.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+/home/a/Desktop/SCHEDULER/source/eventQueue.h
 vector
 -
 fstream
@@ -92,13 +104,85 @@ fstream
 boost/unordered_map.hpp
 -
 event.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.cpp
+/home/a/Desktop/SCHEDULER/source/fileInterface.cpp
+fileInterface.h
+/home/a/Desktop/SCHEDULER/source/fileInterface.h
+
+/home/a/Desktop/SCHEDULER/source/fileInterface.h
+fstream
+-
+boost/filesystem.hpp
+-
+
+/home/a/Desktop/SCHEDULER/source/fileManager.cpp
+fileManager.h
+/home/a/Desktop/SCHEDULER/source/fileManager.h
+
+/home/a/Desktop/SCHEDULER/source/fileManager.h
+vector
+-
+boost/shared_ptr.hpp
+-
+boost/unordered_map.hpp
+-
+boost/filesystem.hpp
+-
+fileInterface.h
+/home/a/Desktop/SCHEDULER/source/fileInterface.h
+
+/home/a/Desktop/SCHEDULER/source/job.cpp
+job.h
+/home/a/Desktop/SCHEDULER/source/job.h
+
+/home/a/Desktop/SCHEDULER/source/job.h
+fstream
+-
+iostream
+-
+string.h
+-
+boost/filesystem.hpp
+-
+constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
+tasksTable.h
+/home/a/Desktop/SCHEDULER/source/tasksTable.h
+dependenciesTable.h
+/home/a/Desktop/SCHEDULER/source/dependenciesTable.h
+
+/home/a/Desktop/SCHEDULER/source/jobManager.cpp
+jobManager.h
+/home/a/Desktop/SCHEDULER/source/jobManager.h
+
+/home/a/Desktop/SCHEDULER/source/jobManager.h
+fstream
+-
+string
+-
+vector
+-
+boost/filesystem.hpp
+-
+boost/unordered_map.hpp
+-
+boost/shared_ptr.hpp
+-
+boost/foreach.hpp
+-
+constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
+job.h
+/home/a/Desktop/SCHEDULER/source/job.h
+tasksTable.h
+/home/a/Desktop/SCHEDULER/source/tasksTable.h
+
+/home/a/Desktop/SCHEDULER/source/listener.cpp
 listener.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+/home/a/Desktop/SCHEDULER/source/listener.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+/home/a/Desktop/SCHEDULER/source/listener.h
 fstream
 -
 string
@@ -108,15 +192,15 @@ boost/thread/mutex.hpp
 boost/thread.hpp
 -
 event.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
 assert.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/assert.h
+/home/a/Desktop/SCHEDULER/source/assert.h
 eventQueue.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+/home/a/Desktop/SCHEDULER/source/eventQueue.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc
+/home/a/Desktop/SCHEDULER/source/msg.pb.cc
 msg.pb.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+/home/a/Desktop/SCHEDULER/source/msg.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -138,7 +222,7 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.h
+/home/a/Desktop/SCHEDULER/source/msg.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -160,11 +244,11 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.cpp
+/home/a/Desktop/SCHEDULER/source/scheduler.cpp
 scheduler.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+/home/a/Desktop/SCHEDULER/source/scheduler.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+/home/a/Desktop/SCHEDULER/source/scheduler.h
 string
 -
 fstream
@@ -172,31 +256,39 @@ fstream
 iostream
 -
 event.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
+jobManager.h
+/home/a/Desktop/SCHEDULER/source/jobManager.h
 tasksTable.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+/home/a/Desktop/SCHEDULER/source/tasksTable.h
 listener.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+/home/a/Desktop/SCHEDULER/source/listener.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/server_main.cpp
+/home/a/Desktop/SCHEDULER/source/server_main.cpp
 fstream
 -
 listener.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.h
+/home/a/Desktop/SCHEDULER/source/listener.h
 scheduler.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.h
+/home/a/Desktop/SCHEDULER/source/scheduler.h
 event.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/event.h
+/home/a/Desktop/SCHEDULER/source/event.h
 eventQueue.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.h
+/home/a/Desktop/SCHEDULER/source/eventQueue.h
 connectionManager.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.h
+/home/a/Desktop/SCHEDULER/source/connectionManager.h
+fileManager.h
+/home/a/Desktop/SCHEDULER/source/fileManager.h
+jobManager.h
+/home/a/Desktop/SCHEDULER/source/jobManager.h
+boost/filesystem.hpp
+-
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.cpp
+/home/a/Desktop/SCHEDULER/source/tasksTable.cpp
 tasksTable.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+/home/a/Desktop/SCHEDULER/source/tasksTable.h
 
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.h
+/home/a/Desktop/SCHEDULER/source/tasksTable.h
 time.h
 -
 fstream
@@ -210,7 +302,15 @@ string.h
 stdio.h
 -
 dependenciesTable.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.h
+/home/a/Desktop/SCHEDULER/source/dependenciesTable.h
 constants.h
-/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/constants.h
+/home/a/Desktop/SCHEDULER/source/constants.h
+boost/filesystem.hpp
+-
+boost/shared_ptr.hpp
+-
+fileInterface.h
+/home/a/Desktop/SCHEDULER/source/fileInterface.h
+fileManager.h
+/home/a/Desktop/SCHEDULER/source/fileManager.h
 

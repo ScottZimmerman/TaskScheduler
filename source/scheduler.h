@@ -4,15 +4,15 @@
 #include <fstream>
 #include <iostream>
 #include "event.h"
+#include "jobManager.h"
 #include "tasksTable.h"
 #include "listener.h"
 
 class Scheduler : public Listener{
 	private:
-		TasksTable * pTasksTable_;
 		static bool finished;
 	public:
-	    Scheduler(TasksTable * pTasksTable);
+	    Scheduler();
 	    ~Scheduler();
 	    
 	    static bool Finished();
@@ -22,19 +22,46 @@ class Scheduler : public Listener{
  		boost::shared_ptr<schedulerMessages::Msg> Parse(boost::shared_ptr<schedulerMessages::Msg> msg);
 
  		//Scheduler functions
- 		tasksRow AssignNewID(int & rowStartByte);
+ 		tasksRow AssignNewID(
+ 			int & rowStartByte,
+ 			std::string job
+ 		);
+		
 		void Queue(
+ 			std::string job,
 			int id, 
 			std::string input_bundle_name,
 			int job_launched_from
 		);
-		tasksRow Receive(bool & taskFound, std::string submitted_instance);
-		bool Requeue(int id);
-		void Finish(int id);
-		void Cancel(int id);
-    	void AddDependency(int childID, int parentID);
+		
+		tasksRow Receive(
+			bool & taskFound, 
+			std::string submitted_instance
+		);
 
-		void AssignNewID_Multiple(int num_to_assign, std::vector<int> & result);
+		bool Requeue(
+ 			std::string job,
+ 			int id
+ 		);
+		void Finish(
+ 			std::string job,
+ 			int id
+ 		);
+		void Cancel(
+ 			std::string job,
+ 			int id
+ 		);
+    	void AddDependency(
+ 			std::string job,
+ 			int childID, 
+ 			int parentID
+ 		);
+
+		void AssignNewID_Multiple(
+			std::string job,
+ 			int num_to_assign, 
+ 			std::vector<int> & result
+ 		);
 
     	void Log(boost::shared_ptr<Server_Request_Event>);
     	static void Run(Scheduler & scheduler);

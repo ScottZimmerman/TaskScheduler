@@ -20,11 +20,37 @@ CMakeFiles/server.dir/source/connectionManager.cpp.o: ../source/msg.pb.h
 
 CMakeFiles/server.dir/source/dependenciesTable.cpp.o: ../source/dependenciesTable.cpp
 CMakeFiles/server.dir/source/dependenciesTable.cpp.o: ../source/dependenciesTable.h
+CMakeFiles/server.dir/source/dependenciesTable.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/dependenciesTable.cpp.o: ../source/fileManager.h
 
 CMakeFiles/server.dir/source/eventQueue.cpp.o: ../source/event.h
 CMakeFiles/server.dir/source/eventQueue.cpp.o: ../source/eventQueue.cpp
 CMakeFiles/server.dir/source/eventQueue.cpp.o: ../source/eventQueue.h
 CMakeFiles/server.dir/source/eventQueue.cpp.o: ../source/msg.pb.h
+
+CMakeFiles/server.dir/source/fileInterface.cpp.o: ../source/fileInterface.cpp
+CMakeFiles/server.dir/source/fileInterface.cpp.o: ../source/fileInterface.h
+
+CMakeFiles/server.dir/source/fileManager.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/fileManager.cpp.o: ../source/fileManager.cpp
+CMakeFiles/server.dir/source/fileManager.cpp.o: ../source/fileManager.h
+
+CMakeFiles/server.dir/source/job.cpp.o: ../source/constants.h
+CMakeFiles/server.dir/source/job.cpp.o: ../source/dependenciesTable.h
+CMakeFiles/server.dir/source/job.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/job.cpp.o: ../source/fileManager.h
+CMakeFiles/server.dir/source/job.cpp.o: ../source/job.cpp
+CMakeFiles/server.dir/source/job.cpp.o: ../source/job.h
+CMakeFiles/server.dir/source/job.cpp.o: ../source/tasksTable.h
+
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/constants.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/dependenciesTable.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/fileManager.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/job.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/jobManager.cpp
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/jobManager.h
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/tasksTable.h
 
 CMakeFiles/server.dir/source/listener.cpp.o: ../source/event.h
 CMakeFiles/server.dir/source/listener.cpp.o: ../source/eventQueue.h
@@ -39,6 +65,10 @@ CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/constants.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/dependenciesTable.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/event.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/eventQueue.h
+CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/fileManager.h
+CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/job.h
+CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/jobManager.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/listener.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/msg.pb.h
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/scheduler.cpp
@@ -51,6 +81,10 @@ CMakeFiles/server.dir/source/server_main.cpp.o: ../source/constants.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/dependenciesTable.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/event.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/eventQueue.h
+CMakeFiles/server.dir/source/server_main.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/server_main.cpp.o: ../source/fileManager.h
+CMakeFiles/server.dir/source/server_main.cpp.o: ../source/job.h
+CMakeFiles/server.dir/source/server_main.cpp.o: ../source/jobManager.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/listener.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/msg.pb.h
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/scheduler.h
@@ -59,6 +93,8 @@ CMakeFiles/server.dir/source/server_main.cpp.o: ../source/tasksTable.h
 
 CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/constants.h
 CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/dependenciesTable.h
+CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/fileInterface.h
+CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/fileManager.h
 CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/tasksTable.cpp
 CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/tasksTable.h
 

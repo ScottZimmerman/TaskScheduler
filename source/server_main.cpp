@@ -4,11 +4,23 @@
 #include "event.h"
 #include "eventQueue.h"
 #include "connectionManager.h"
+#include "fileManager.h"
+#include "jobManager.h"
+#include <boost/filesystem.hpp>
 
 int main(int argc, char * argv[]){
   if (argc != 3) {
         fprintf(stderr,"usage: %s minPort numPorts\n",argv[0]);
         exit(1);
+  }
+
+  JobManager jobManager;
+  printf("After jobmanager creation\n");
+  //------------------------
+  //Data folder setup
+  //------------------------
+  if (!boost::filesystem::exists(DATA_FOLDER)){
+      boost::filesystem::create_directory(DATA_FOLDER);
   }
 
   //------------------------
@@ -22,16 +34,16 @@ int main(int argc, char * argv[]){
   //------------------------
   //Scheduler setup
   //------------------------
-  //Dependencies Table
-  DependenciesTable dependencies;
+  /*//Dependencies Table
+  DependenciesTable dependencies(jobPath);
   DependenciesTable * pDependencies = &dependencies;
   
   //Tasks Table
-  TasksTable tasks(pDependencies);
+  TasksTable tasks(jobPath, pDependencies);
   TasksTable * pTasks = &tasks;
-
+*/
   //Register scheduler's callbacks
-  Scheduler scheduler(pTasks);
+  Scheduler scheduler;
   NonStatMemCB scheduler_cbdata;
   scheduler_cbdata.fn = Listener::Add_Wrapper;
   scheduler_cbdata.listener = &scheduler;

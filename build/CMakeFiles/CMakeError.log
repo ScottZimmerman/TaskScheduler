@@ -1,23 +1,23 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp
+Change Dir: /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3736979875/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3736979875.dir/build.make CMakeFiles/cmTryCompileExec3736979875.dir/build
-make[1]: Entering directory `/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec3736979875.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3736979875.dir/CheckSymbolExists.c.o   -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
-Linking C executable cmTryCompileExec3736979875
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3736979875.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3736979875.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3736979875 -rdynamic 
-CMakeFiles/cmTryCompileExec3736979875.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1417680509/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1417680509.dir/build.make CMakeFiles/cmTryCompileExec1417680509.dir/build
+make[1]: Entering directory `/home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1417680509.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1417680509.dir/CheckSymbolExists.c.o   -c /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1417680509
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1417680509.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1417680509.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1417680509 -rdynamic 
+CMakeFiles/cmTryCompileExec1417680509.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec3736979875] Error 1
-make[1]: Leaving directory `/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3736979875/fast] Error 2
+make[1]: *** [cmTryCompileExec1417680509] Error 1
+make[1]: Leaving directory `/home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1417680509/fast] Error 2
 
-File /home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -33,21 +33,21 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp
+Change Dir: /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2959668947/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2959668947.dir/build.make CMakeFiles/cmTryCompileExec2959668947.dir/build
-make[1]: Entering directory `/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp/CMakeFiles" 1
-Building C object CMakeFiles/cmTryCompileExec2959668947.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2959668947.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2959668947
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2959668947.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2959668947.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2959668947 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2115115574/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2115115574.dir/build.make CMakeFiles/cmTryCompileExec2115115574.dir/build
+make[1]: Entering directory `/home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2115115574.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2115115574.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2115115574
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2115115574.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2115115574.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2115115574 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec2959668947] Error 1
-make[1]: Leaving directory `/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec2959668947/fast] Error 2
+make[1]: Leaving directory `/home/a/Desktop/SCHEDULER/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2115115574] Error 1
+make: *** [cmTryCompileExec2115115574/fast] Error 2
 
 

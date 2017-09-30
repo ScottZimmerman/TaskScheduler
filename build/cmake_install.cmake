@@ -1,4 +1,4 @@
-# Install script for directory: /home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling
+# Install script for directory: /home/a/Desktop/SCHEDULER
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/a/Desktop/SCHEDULER/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

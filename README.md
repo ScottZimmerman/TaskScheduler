@@ -39,11 +39,38 @@ make
 ./server 51717 3
 3) Run the "run.sh" script from the example's subdirectory
 
+## Edits to existing functions to make them job-specific
+- TO DO assign \<job_name> (\<count>):
+	- Generate and return one or more task ID numbers, but do not queue the task
+- TO DO queue \<job_name> \<task_id> \<input_bundle> \<task_queued_from>:
+	- Indicates that the task can is ok to run as soon as its dependents are finished. and adds the name (or path) of the instructions bundle. Parsing of the instructions bundle name is the engine's responsibility.
+- TO DO finish \<job_name> \<task_id>:
+	- Indicates that the task completed successfully.
+- TO DO cancel \<job_name> \<task_id>:
+	- Cancel a task and all of its dependents.
+- TO DO add_dependency \<job_name> \<parent_id> \<child_id>:
+	- Either use after assign but prior to queue, or dynamically add dependencies to already queued tasks (see P_A.py in the example).
+-NB receive will take the next task regardless of the job it belongs to
+
+## New functions
+- TO DO create_job (\<submitted_instance_name>)
+- TO DO receive_from_job \<job_name> (\<submitted_instance_name>)
+- TO DO cancel_job \<job_name>
+- TO DO get_job_status \<job_name>
+- TO DO tail \<job_name>
+
 ## Planned future additions
+- [DONE] Currently scheduler has a single tasks table object... instead of this, it should know about a jobs manager object. For messages where a specific job is requested, the scheduler will use the jobs manager to get the job, from which the job-specific task and dependency tables will run as they do currently. For messages where any job may be used, the scheduler can search over multiple jobs.
+- [DONE] Currently files are managed through the table classes... should probably inherit a file handling object, or conduct file operations through a file manager object 
+- JobsManager recieve should first determine the next task across all jobs... then choose according to priority. Default priority should be to choose the task that was queued first.
+- Tasks table "receives" by looking through all of the tasks on disk until it finds the next... this should be moved into memory, and the search algorithm made more efficient.
 - Async_accept for sockets
 - Logging thread
 - Status query commands
 - Requeue incomplete tasks upon server startup
 - Remove_dependency function
-- Job-specific binary files
+- [DONE] Job-specific binary files
 - Scheduler process termination conditions
+- Multiple users
+- Protobuf serialization to data files
+- Package this as a library that can be used as part of a C++ application

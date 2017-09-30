@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling"
+CMAKE_SOURCE_DIR = /home/a/Desktop/SCHEDULER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build"
+CMAKE_BINARY_DIR = /home/a/Desktop/SCHEDULER/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/server.dir/flags.make
 
 CMakeFiles/server.dir/source/server_main.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/server_main.cpp.o: ../source/server_main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/server_main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/server_main.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/server_main.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/server_main.cpp.o -c /home/a/Desktop/SCHEDULER/source/server_main.cpp
 
 CMakeFiles/server.dir/source/server_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/server_main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/server_main.cpp" > CMakeFiles/server.dir/source/server_main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/server_main.cpp > CMakeFiles/server.dir/source/server_main.cpp.i
 
 CMakeFiles/server.dir/source/server_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/server_main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/server_main.cpp" -o CMakeFiles/server.dir/source/server_main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/server_main.cpp -o CMakeFiles/server.dir/source/server_main.cpp.s
 
 CMakeFiles/server.dir/source/server_main.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/server_main.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/server.dir/source/server_main.cpp.o.provides.build: CMakeFiles/server
 
 CMakeFiles/server.dir/source/eventQueue.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/eventQueue.cpp.o: ../source/eventQueue.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/eventQueue.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/eventQueue.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/eventQueue.cpp.o -c /home/a/Desktop/SCHEDULER/source/eventQueue.cpp
 
 CMakeFiles/server.dir/source/eventQueue.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/eventQueue.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.cpp" > CMakeFiles/server.dir/source/eventQueue.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/eventQueue.cpp > CMakeFiles/server.dir/source/eventQueue.cpp.i
 
 CMakeFiles/server.dir/source/eventQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/eventQueue.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/eventQueue.cpp" -o CMakeFiles/server.dir/source/eventQueue.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/eventQueue.cpp -o CMakeFiles/server.dir/source/eventQueue.cpp.s
 
 CMakeFiles/server.dir/source/eventQueue.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/eventQueue.cpp.o.requires
@@ -95,19 +95,111 @@ CMakeFiles/server.dir/source/eventQueue.cpp.o.provides: CMakeFiles/server.dir/so
 
 CMakeFiles/server.dir/source/eventQueue.cpp.o.provides.build: CMakeFiles/server.dir/source/eventQueue.cpp.o
 
+CMakeFiles/server.dir/source/fileInterface.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/source/fileInterface.cpp.o: ../source/fileInterface.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/fileInterface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/fileInterface.cpp.o -c /home/a/Desktop/SCHEDULER/source/fileInterface.cpp
+
+CMakeFiles/server.dir/source/fileInterface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/fileInterface.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/fileInterface.cpp > CMakeFiles/server.dir/source/fileInterface.cpp.i
+
+CMakeFiles/server.dir/source/fileInterface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/fileInterface.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/fileInterface.cpp -o CMakeFiles/server.dir/source/fileInterface.cpp.s
+
+CMakeFiles/server.dir/source/fileInterface.cpp.o.requires:
+.PHONY : CMakeFiles/server.dir/source/fileInterface.cpp.o.requires
+
+CMakeFiles/server.dir/source/fileInterface.cpp.o.provides: CMakeFiles/server.dir/source/fileInterface.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/source/fileInterface.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/source/fileInterface.cpp.o.provides
+
+CMakeFiles/server.dir/source/fileInterface.cpp.o.provides.build: CMakeFiles/server.dir/source/fileInterface.cpp.o
+
+CMakeFiles/server.dir/source/fileManager.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/source/fileManager.cpp.o: ../source/fileManager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/fileManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/fileManager.cpp.o -c /home/a/Desktop/SCHEDULER/source/fileManager.cpp
+
+CMakeFiles/server.dir/source/fileManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/fileManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/fileManager.cpp > CMakeFiles/server.dir/source/fileManager.cpp.i
+
+CMakeFiles/server.dir/source/fileManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/fileManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/fileManager.cpp -o CMakeFiles/server.dir/source/fileManager.cpp.s
+
+CMakeFiles/server.dir/source/fileManager.cpp.o.requires:
+.PHONY : CMakeFiles/server.dir/source/fileManager.cpp.o.requires
+
+CMakeFiles/server.dir/source/fileManager.cpp.o.provides: CMakeFiles/server.dir/source/fileManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/source/fileManager.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/source/fileManager.cpp.o.provides
+
+CMakeFiles/server.dir/source/fileManager.cpp.o.provides.build: CMakeFiles/server.dir/source/fileManager.cpp.o
+
+CMakeFiles/server.dir/source/job.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/source/job.cpp.o: ../source/job.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/job.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/job.cpp.o -c /home/a/Desktop/SCHEDULER/source/job.cpp
+
+CMakeFiles/server.dir/source/job.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/job.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/job.cpp > CMakeFiles/server.dir/source/job.cpp.i
+
+CMakeFiles/server.dir/source/job.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/job.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/job.cpp -o CMakeFiles/server.dir/source/job.cpp.s
+
+CMakeFiles/server.dir/source/job.cpp.o.requires:
+.PHONY : CMakeFiles/server.dir/source/job.cpp.o.requires
+
+CMakeFiles/server.dir/source/job.cpp.o.provides: CMakeFiles/server.dir/source/job.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/source/job.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/source/job.cpp.o.provides
+
+CMakeFiles/server.dir/source/job.cpp.o.provides.build: CMakeFiles/server.dir/source/job.cpp.o
+
+CMakeFiles/server.dir/source/jobManager.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/source/jobManager.cpp.o: ../source/jobManager.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/jobManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/jobManager.cpp.o -c /home/a/Desktop/SCHEDULER/source/jobManager.cpp
+
+CMakeFiles/server.dir/source/jobManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/jobManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/jobManager.cpp > CMakeFiles/server.dir/source/jobManager.cpp.i
+
+CMakeFiles/server.dir/source/jobManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/jobManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/jobManager.cpp -o CMakeFiles/server.dir/source/jobManager.cpp.s
+
+CMakeFiles/server.dir/source/jobManager.cpp.o.requires:
+.PHONY : CMakeFiles/server.dir/source/jobManager.cpp.o.requires
+
+CMakeFiles/server.dir/source/jobManager.cpp.o.provides: CMakeFiles/server.dir/source/jobManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/source/jobManager.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/source/jobManager.cpp.o.provides
+
+CMakeFiles/server.dir/source/jobManager.cpp.o.provides.build: CMakeFiles/server.dir/source/jobManager.cpp.o
+
 CMakeFiles/server.dir/source/listener.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/listener.cpp.o: ../source/listener.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/listener.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/listener.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/listener.cpp.o -c /home/a/Desktop/SCHEDULER/source/listener.cpp
 
 CMakeFiles/server.dir/source/listener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/listener.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.cpp" > CMakeFiles/server.dir/source/listener.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/listener.cpp > CMakeFiles/server.dir/source/listener.cpp.i
 
 CMakeFiles/server.dir/source/listener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/listener.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/listener.cpp" -o CMakeFiles/server.dir/source/listener.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/listener.cpp -o CMakeFiles/server.dir/source/listener.cpp.s
 
 CMakeFiles/server.dir/source/listener.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/listener.cpp.o.requires
@@ -120,17 +212,17 @@ CMakeFiles/server.dir/source/listener.cpp.o.provides.build: CMakeFiles/server.di
 
 CMakeFiles/server.dir/source/scheduler.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/scheduler.cpp.o: ../source/scheduler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/scheduler.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/scheduler.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/scheduler.cpp.o -c /home/a/Desktop/SCHEDULER/source/scheduler.cpp
 
 CMakeFiles/server.dir/source/scheduler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/scheduler.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.cpp" > CMakeFiles/server.dir/source/scheduler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/scheduler.cpp > CMakeFiles/server.dir/source/scheduler.cpp.i
 
 CMakeFiles/server.dir/source/scheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/scheduler.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/scheduler.cpp" -o CMakeFiles/server.dir/source/scheduler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/scheduler.cpp -o CMakeFiles/server.dir/source/scheduler.cpp.s
 
 CMakeFiles/server.dir/source/scheduler.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/scheduler.cpp.o.requires
@@ -143,17 +235,17 @@ CMakeFiles/server.dir/source/scheduler.cpp.o.provides.build: CMakeFiles/server.d
 
 CMakeFiles/server.dir/source/dependenciesTable.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/dependenciesTable.cpp.o: ../source/dependenciesTable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/dependenciesTable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/dependenciesTable.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/dependenciesTable.cpp.o -c /home/a/Desktop/SCHEDULER/source/dependenciesTable.cpp
 
 CMakeFiles/server.dir/source/dependenciesTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/dependenciesTable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.cpp" > CMakeFiles/server.dir/source/dependenciesTable.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/dependenciesTable.cpp > CMakeFiles/server.dir/source/dependenciesTable.cpp.i
 
 CMakeFiles/server.dir/source/dependenciesTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/dependenciesTable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/dependenciesTable.cpp" -o CMakeFiles/server.dir/source/dependenciesTable.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/dependenciesTable.cpp -o CMakeFiles/server.dir/source/dependenciesTable.cpp.s
 
 CMakeFiles/server.dir/source/dependenciesTable.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/dependenciesTable.cpp.o.requires
@@ -166,17 +258,17 @@ CMakeFiles/server.dir/source/dependenciesTable.cpp.o.provides.build: CMakeFiles/
 
 CMakeFiles/server.dir/source/tasksTable.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/tasksTable.cpp.o: ../source/tasksTable.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/tasksTable.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/tasksTable.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/tasksTable.cpp.o -c /home/a/Desktop/SCHEDULER/source/tasksTable.cpp
 
 CMakeFiles/server.dir/source/tasksTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/tasksTable.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.cpp" > CMakeFiles/server.dir/source/tasksTable.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/tasksTable.cpp > CMakeFiles/server.dir/source/tasksTable.cpp.i
 
 CMakeFiles/server.dir/source/tasksTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/tasksTable.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/tasksTable.cpp" -o CMakeFiles/server.dir/source/tasksTable.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/tasksTable.cpp -o CMakeFiles/server.dir/source/tasksTable.cpp.s
 
 CMakeFiles/server.dir/source/tasksTable.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/tasksTable.cpp.o.requires
@@ -189,17 +281,17 @@ CMakeFiles/server.dir/source/tasksTable.cpp.o.provides.build: CMakeFiles/server.
 
 CMakeFiles/server.dir/source/msg.pb.cc.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/msg.pb.cc.o: ../source/msg.pb.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/msg.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/msg.pb.cc.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/msg.pb.cc.o -c /home/a/Desktop/SCHEDULER/source/msg.pb.cc
 
 CMakeFiles/server.dir/source/msg.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/msg.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc" > CMakeFiles/server.dir/source/msg.pb.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/msg.pb.cc > CMakeFiles/server.dir/source/msg.pb.cc.i
 
 CMakeFiles/server.dir/source/msg.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/msg.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/msg.pb.cc" -o CMakeFiles/server.dir/source/msg.pb.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/msg.pb.cc -o CMakeFiles/server.dir/source/msg.pb.cc.s
 
 CMakeFiles/server.dir/source/msg.pb.cc.o.requires:
 .PHONY : CMakeFiles/server.dir/source/msg.pb.cc.o.requires
@@ -212,17 +304,17 @@ CMakeFiles/server.dir/source/msg.pb.cc.o.provides.build: CMakeFiles/server.dir/s
 
 CMakeFiles/server.dir/source/connection.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/connection.cpp.o: ../source/connection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/connection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/connection.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/connection.cpp.o -c /home/a/Desktop/SCHEDULER/source/connection.cpp
 
 CMakeFiles/server.dir/source/connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/connection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.cpp" > CMakeFiles/server.dir/source/connection.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/connection.cpp > CMakeFiles/server.dir/source/connection.cpp.i
 
 CMakeFiles/server.dir/source/connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/connection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connection.cpp" -o CMakeFiles/server.dir/source/connection.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/connection.cpp -o CMakeFiles/server.dir/source/connection.cpp.s
 
 CMakeFiles/server.dir/source/connection.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/connection.cpp.o.requires
@@ -235,17 +327,17 @@ CMakeFiles/server.dir/source/connection.cpp.o.provides.build: CMakeFiles/server.
 
 CMakeFiles/server.dir/source/connectionManager.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/source/connectionManager.cpp.o: ../source/connectionManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles" $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/a/Desktop/SCHEDULER/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/server.dir/source/connectionManager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/connectionManager.cpp.o -c "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/server.dir/source/connectionManager.cpp.o -c /home/a/Desktop/SCHEDULER/source/connectionManager.cpp
 
 CMakeFiles/server.dir/source/connectionManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/source/connectionManager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.cpp" > CMakeFiles/server.dir/source/connectionManager.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/a/Desktop/SCHEDULER/source/connectionManager.cpp > CMakeFiles/server.dir/source/connectionManager.cpp.i
 
 CMakeFiles/server.dir/source/connectionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/source/connectionManager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/source/connectionManager.cpp" -o CMakeFiles/server.dir/source/connectionManager.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/a/Desktop/SCHEDULER/source/connectionManager.cpp -o CMakeFiles/server.dir/source/connectionManager.cpp.s
 
 CMakeFiles/server.dir/source/connectionManager.cpp.o.requires:
 .PHONY : CMakeFiles/server.dir/source/connectionManager.cpp.o.requires
@@ -260,6 +352,10 @@ CMakeFiles/server.dir/source/connectionManager.cpp.o.provides.build: CMakeFiles/
 server_OBJECTS = \
 "CMakeFiles/server.dir/source/server_main.cpp.o" \
 "CMakeFiles/server.dir/source/eventQueue.cpp.o" \
+"CMakeFiles/server.dir/source/fileInterface.cpp.o" \
+"CMakeFiles/server.dir/source/fileManager.cpp.o" \
+"CMakeFiles/server.dir/source/job.cpp.o" \
+"CMakeFiles/server.dir/source/jobManager.cpp.o" \
 "CMakeFiles/server.dir/source/listener.cpp.o" \
 "CMakeFiles/server.dir/source/scheduler.cpp.o" \
 "CMakeFiles/server.dir/source/dependenciesTable.cpp.o" \
@@ -273,6 +369,10 @@ server_EXTERNAL_OBJECTS =
 
 server: CMakeFiles/server.dir/source/server_main.cpp.o
 server: CMakeFiles/server.dir/source/eventQueue.cpp.o
+server: CMakeFiles/server.dir/source/fileInterface.cpp.o
+server: CMakeFiles/server.dir/source/fileManager.cpp.o
+server: CMakeFiles/server.dir/source/job.cpp.o
+server: CMakeFiles/server.dir/source/jobManager.cpp.o
 server: CMakeFiles/server.dir/source/listener.cpp.o
 server: CMakeFiles/server.dir/source/scheduler.cpp.o
 server: CMakeFiles/server.dir/source/dependenciesTable.cpp.o
@@ -286,10 +386,12 @@ server: /usr/lib/x86_64-linux-gnu/libboost_system.a
 server: /usr/lib/x86_64-linux-gnu/libboost_thread.a
 server: /usr/lib/x86_64-linux-gnu/libboost_timer.a
 server: /usr/lib/x86_64-linux-gnu/libboost_chrono.a
+server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
 server: /usr/lib/x86_64-linux-gnu/libboost_system.a
 server: /usr/lib/x86_64-linux-gnu/libboost_thread.a
 server: /usr/lib/x86_64-linux-gnu/libboost_timer.a
 server: /usr/lib/x86_64-linux-gnu/libboost_chrono.a
+server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
 server: CMakeFiles/server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
@@ -300,6 +402,10 @@ CMakeFiles/server.dir/build: server
 
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/server_main.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/eventQueue.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/fileInterface.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/fileManager.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/job.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/jobManager.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/listener.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/scheduler.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/source/dependenciesTable.cpp.o.requires
@@ -314,6 +420,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling" "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling" "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build" "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build" "/home/a/Desktop/Release Scheduler/51_Input_Parsing_and_Scheduling/build/CMakeFiles/server.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/a/Desktop/SCHEDULER/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/Desktop/SCHEDULER /home/a/Desktop/SCHEDULER /home/a/Desktop/SCHEDULER/build /home/a/Desktop/SCHEDULER/build /home/a/Desktop/SCHEDULER/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 
